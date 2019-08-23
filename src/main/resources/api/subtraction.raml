@@ -1,0 +1,30 @@
+#%RAML 1.0
+version: v1
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/5615f9dd-f272-40ed-beb6-c1159c972fa6/ # 
+title: Subtraction
+
+/sub:
+  get:
+    queryParameters:
+      num1:
+        type: number
+        required: true
+      num2:
+        type: number
+        required: true
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {"message" : "subtraction done"}
+  post:
+    body:
+      application/json:
+        example:    
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {"message" : "Numbers subtracted"}
